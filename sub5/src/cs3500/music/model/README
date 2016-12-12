@@ -1,0 +1,34 @@
+My design for the Music Model assignment included two interfaces, Note and
+GenericMusicEditor, their implementing classes QuarteredNote and
+MusicEditorModel respectively and another class Song.
+
+I segmented this program into these parts so that the could support these
+roles:
+
+Note - to represent any notes in a song. These would have to have a pitch
+(which I designated to be an enum for operability and simplicity), beat,
+octave and whether the note was being held. I also overrode my equals
+and hashcode functions so that it only compares the note's pitch and octave,
+since for
+comparing notes their beat and whether they're held aren't relevant to their
+equality.
+
+QuarteredNote - titled such since each note represents a quarter note. This
+is the simplest implementation of Note since we only worked with quarter
+notes in this assignment, rather than smaller divisions and rests.
+
+Song - Our collection of notes. I decided to use a one dimensional arraylist
+of notes for my song since it proved easy to work with and manipulate. Song's
+ only purpose is to store our notes, modify them by their indexes and return
+ information on our entire collection (knowing only the notes, not their
+ ordering).
+
+GenericMusicEditor - the interface for our music editor, this interface sets
+the guidelines for the basic functions every editor must have.
+
+MusicEditorModel - implements our editor interface and contains a song that
+it keeps ordered by the beat of each note and their order in the chromatic
+scale. I decided to use this invariant on my song collection so that making
+my editor view output would be an easier task and so that manipulating my
+notes with remove and move functions would be easier and more efficient as
+well.

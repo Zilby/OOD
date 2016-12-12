@@ -1,0 +1,25 @@
+The design for our final MusicEditor remains similar to our structure from
+the previous assignment. To accommodate the changes we did make a few changes.
+ We split our main class's methods to be part of our MusicController class. We
+ also modified our Midi view to utilize a timer rather than Thread.sleep so
+ that it could be used in conjunction with our Gui view in our composite view
+ . In our ConcreteGuiViewPanel we added a GraphicsUpdater class so that it
+ could load the notes of our song more efficiently, which proved essential
+ for getting our composite view running at a decent speed.
+
+ Other than that our design proved to be effective at handling these new
+ tasks. We added a keyboard handler, a mouse handler and a mouse runnable
+ class for mouse and keyboard inputs, and used our controller to add the
+ correct functions. In our gui view we also added functions for removing and
+ adding notes so that they could be assigned to inputs by the controller.
+
+ Commands for the gui view:
+ Arrow keys - move the scrollbars
+ Home / FN + Left - move to beginning of the song
+ End/ FN + Right - move to the end of the song
+ Left Click - removes the note you clicked on, starting at the beat where you
+ clicked
+ A - begins a dialogue for adding a note
+
+ Commands for composite view:
+ P - Pauses/Resumes playback

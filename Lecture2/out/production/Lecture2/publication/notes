@@ -1,0 +1,7 @@
+Can do
+"@Test(expected=IndexOutOfBoundsException.class)"
+in order to test such an exception.
+
+Alt + Enter lets you create a Test class (must be done in Junit4)
+
+package.ClassName lets you select such an object from the package.

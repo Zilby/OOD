@@ -1,0 +1,6 @@
+public class Driver {
+    public static void main(String[] args) {
+	TestController3 t = new TestController3();
+	System.out.println(t.testGo());
+    }
+}
